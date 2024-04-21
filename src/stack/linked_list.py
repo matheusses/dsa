@@ -18,7 +18,9 @@ class Stack:
 # aux  => 2 -> None
 # aux.next = 1 -> None
 
-#  2 -> 1 -> None 
+#  2 -> 1 -> None
+
+# 3 -> 2 -> 1 -> None 
 
 
 
@@ -36,8 +38,7 @@ class Stack:
         self.head = self.head.next
 
         return aux.val
-            
-
+           
     def peek(self):
         if self.is_empty():
             return None
@@ -46,15 +47,3 @@ class Stack:
     def is_empty(self):
         return self.head is None
 
-
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-print(stack.pop())  
-print(stack.pop())  
-print(stack.pop())
-stack.push(1)
-stack.push(2)
-stack.push(3)
-print(stack.peek())
